@@ -11,5 +11,25 @@ todoButton.addEventListener("click", addTodo)
 
 function addTodo(event) {
     event.preventDefault()  
-    console.log('clicou')
+
+    const todoDiv = document.createElement('div')
+    todoDiv.classList.add('todo')
+
+    const todoLi = document.createElement('li')
+    todoLi.classList.add('todo-list')
+    todoLi.innerText = 'o tempo é rei'
+
+    todoDiv.appendChild(todoLi)
+
+    const completedButton = document.createElement('button')
+    completedButton.innerHTML = '<i class="fa-solid fa-circle-check"></i>'
+    completedButton.classList.add('completed-btn')
+    todoDiv.appendChild(completedButton)
+
+    const trashButton = document.createElement('button')
+    trashButton.innerHTML = '<i class="fa-solid fa-trash"></i>'
+    trashButton.classList.add('trash-btn')
+    todoDiv.appendChild(trashButton)
+
+    todoList.appendChild(todoDiv)
 }
