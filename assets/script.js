@@ -17,7 +17,7 @@ function addTodo(event) {
 
     const todoLi = document.createElement('li')
     todoLi.classList.add('todo-list')
-    todoLi.innerText = 'o tempo é rei'
+    todoLi.innerText = todoInput.value;
 
     todoDiv.appendChild(todoLi)
 
